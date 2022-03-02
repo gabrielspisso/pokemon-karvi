@@ -3,6 +3,7 @@ import { pokemonRoute } from '../utils/routes';
 import useSWR from 'swr';
 import { pokemonFetcher } from '../utils/fetcher';
 import { Pokemon } from '../utils/types';
+import PokemonCard from '../components/PokemonCard';
 
 const Catalog: FunctionComponent<{}> = () => {
     const [pokemons, setPokemons] = useState<Pokemon[]>([]);
@@ -20,11 +21,13 @@ const Catalog: FunctionComponent<{}> = () => {
     if (!data) return <div>loading...</div>
 
     return (
-    <div className='md:columns-3 sm:columns-2 xs:columns-1'>
-        <div>Test</div>
-        <div>Test</div>
-        <div>Test</div>
-    </div>
+        <div>
+            <div className='grid md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1 content-end'>
+                {
+                    pokemons.map(pokemon => <PokemonCard key={pokemon.name} pokemon={pokemon}/>)
+                }
+            </div>
+        </div>
     );
 };
 
