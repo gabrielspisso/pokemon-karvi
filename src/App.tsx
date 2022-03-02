@@ -1,24 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
+import logo from './assets/images/pokelogo-karvi.png';
 import './App.css';
+import Catalog from './views/Catalog';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container mx-auto h-screen">
+      <img src={logo} className="mx-auto" />
+      <Catalog/>
     </div>
   );
 }
