@@ -4,6 +4,7 @@ import useSWR from 'swr';
 import { pokemonFetcher } from '../utils/fetcher';
 import { Pokemon } from '../utils/types';
 import PokemonCard from '../components/PokemonCard';
+import BlackButton from '../components/BlackButton';
 
 const Catalog: FunctionComponent<{}> = () => {
     const [pokemons, setPokemons] = useState<Pokemon[]>([]);
@@ -18,7 +19,7 @@ const Catalog: FunctionComponent<{}> = () => {
     }, [data])
 
     if (error) return <div>failed to load</div>
-    if (!data) return <div>loading...</div>
+    if (pokemons.length == 0) return <div>loading...</div>
 
     return (
         <div>
@@ -26,6 +27,9 @@ const Catalog: FunctionComponent<{}> = () => {
                 {
                     pokemons.map(pokemon => <PokemonCard key={pokemon.name} pokemon={pokemon}/>)
                 }
+            </div>
+            <div className='grid mx-auto'>
+                <BlackButton text='Load more' onClick={() => setOffset(offset + limit)}/>
             </div>
         </div>
     );
