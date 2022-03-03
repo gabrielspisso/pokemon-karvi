@@ -1,7 +1,7 @@
 import React, { FunctionComponent, useState, useEffect } from 'react';
 import { pokemonRoute } from '../utils/routes';
 import useSWR from 'swr';
-import { pokemonFetcher } from '../utils/fetcher';
+import { pokemonFetcher } from '../utils/fetchers';
 import { Pokemon } from '../utils/types';
 import PokemonCard from '../components/PokemonCard';
 import BlackButton from '../components/BlackButton';

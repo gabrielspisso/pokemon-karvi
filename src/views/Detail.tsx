@@ -1,7 +1,55 @@
 import React, { FunctionComponent } from 'react';
+import { useParams } from 'react-router-dom';
+import useSWR from 'swr';
+import PokemonCard from '../components/PokemonCard';
+import { pokemonDetailFetcher } from '../utils/fetchers';
+import { pokemonRoute } from '../utils/routes';
+import { Pokemon, PokemonDetail } from '../utils/types';
+
+function capitalizeFirstLetter(str: string): string {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+function getTypes(p: Pokemon): string{
+    return p.types.map(type => capitalizeFirstLetter(type.type.name)).join(', ');
+}
+
 
 const Detail: FunctionComponent<{}> = () => {
-    return null;
+    const { id } = useParams();
+    const { data: pokemonDetail, error } = useSWR<PokemonDetail>(`${pokemonRoute}/${id}`, pokemonDetailFetcher);
+    
+
+    if (error) return <div>failed to load</div>
+    if (!pokemonDetail) return <div>loading...</div>
+
+    return (
+        <div className='container mx-auto h-screen'>
+            <div className='grid md:grid-cols-2 xs:grid-cols-1 content-end'>
+                <img 
+                    src={pokemonDetail.pokemon.sprites.other.dream_world.front_default}
+                    className='mx-auto py-8 w-80'
+                />
+                <div className='sm:mx-auto'>
+                    <div className="text-5xl text-left font-medium py-8 w-[100%] justify-self-auto ">
+                        {pokemonDetail.pokemon.name.toUpperCase()}
+                        <p className="
+                            text-2xl
+                            text-left 
+                            font-thin 
+                            py-8 
+                            w-[100%]
+                            tracking-wide"
+                        >
+                            This pokemon has types: {getTypes(pokemonDetail.pokemon)}
+                            <br /><br />
+                            Can be found on: {capitalizeFirstLetter(pokemonDetail.habitat)}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
 };
 
 export default Detail;

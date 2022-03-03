@@ -8,15 +8,15 @@ type PokemonCardProps = {
 
 const PokemonCard: FunctionComponent<PokemonCardProps> = ({ pokemon }) => {
 
-    const getTypes = (p: Pokemon): string[] => pokemon.types.map(type => type.type.name);
+    const getTypes = (): string[] => pokemon.types.map(type => type.type.name);
 
     return (
         <div 
             className='px-20 hover:border hover:cursor-pointer h-[100%] grid items-end'
-            onClick={() => alert(getTypes(pokemon).join(' '))}
+            onClick={() => alert(getTypes().join(' '))}
         >
             <div className='grid flex grid-cols-4 items-start h-[100%] py-2'>
-                {getTypes(pokemon).map(type => <PokemonType type={type} key={type} />)}
+                {getTypes().map(type => <PokemonType type={type} key={type} />)}
             </div>
             <img 
                 src={pokemon.sprites.other.dream_world.front_default}
