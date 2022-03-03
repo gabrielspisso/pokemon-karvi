@@ -6,7 +6,6 @@ import {
 import { Route } from 'react-router';
 import Catalog from './views/Catalog';
 import Detail from './views/Detail';
-import logo from './assets/images/pokelogo-karvi.png';
 import './App.css';
 
 function App() {

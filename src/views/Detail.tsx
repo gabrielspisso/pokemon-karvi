@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from 'react';
 import { useParams } from 'react-router-dom';
 import useSWR from 'swr';
+import Loader from '../components/Loader';
 import Logo from '../components/Logo';
 import PokemonCard from '../components/PokemonCard';
 import { pokemonDetailFetcher } from '../utils/fetchers';
@@ -22,7 +23,7 @@ const Detail: FunctionComponent<{}> = () => {
     
 
     if (error) return <div>failed to load</div>
-    if (!pokemonDetail) return <div>loading...</div>
+    if (!pokemonDetail) return <Loader />
 
     return (
         <div className='container mx-auto h-screen space-y-10'>

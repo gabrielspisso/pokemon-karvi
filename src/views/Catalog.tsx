@@ -6,6 +6,7 @@ import { Pokemon } from '../utils/types';
 import PokemonCard from '../components/PokemonCard';
 import BlackButton from '../components/BlackButton';
 import Logo from '../components/Logo';
+import Loader from '../components/Loader';
 
 const Catalog: FunctionComponent<{}> = () => {
     const [pokemons, setPokemons] = useState<Pokemon[]>([]);
@@ -20,7 +21,7 @@ const Catalog: FunctionComponent<{}> = () => {
     }, [data])
 
     if (error) return <div>failed to load</div>
-    if (pokemons.length == 0) return <div>loading...</div>
+    if (pokemons.length == 0) return <Loader />
 
     return (
         <div className="container mx-auto h-screen space-y-10">
