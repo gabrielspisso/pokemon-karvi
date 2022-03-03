@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from 'react';
 import { useParams } from 'react-router-dom';
 import useSWR from 'swr';
+import Logo from '../components/Logo';
 import PokemonCard from '../components/PokemonCard';
 import { pokemonDetailFetcher } from '../utils/fetchers';
 import { pokemonRoute } from '../utils/routes';
@@ -24,7 +25,8 @@ const Detail: FunctionComponent<{}> = () => {
     if (!pokemonDetail) return <div>loading...</div>
 
     return (
-        <div className='container mx-auto h-screen'>
+        <div className='container mx-auto h-screen space-y-10'>
+            <Logo />
             <div className='grid md:grid-cols-2 xs:grid-cols-1 content-end'>
                 <img 
                     src={pokemonDetail.pokemon.sprites.other.dream_world.front_default}
@@ -47,6 +49,33 @@ const Detail: FunctionComponent<{}> = () => {
                         </p>
                     </div>
                 </div>
+            </div>
+            <p className="
+                text-2xl
+                text-left 
+                font-bold
+                font-mono
+                underline
+                underline-offset-8
+                w-[100%]
+                mt-10 
+                tracking-wide">
+                Description
+            </p>
+            <p className="
+                text-2xl
+                text-left 
+                font-thin
+                py-8
+                w-[100%]
+                tracking-wide"
+            >
+                {(pokemonDetail.description)}
+            </p>
+            <div className='overflow-x-scroll inline-flex w-full'>
+                    {pokemonDetail.evolutionChain.map(pok =>
+                        <PokemonCard pokemon={pok} key={pok.name} className='w-96' />
+                    )}
             </div>
         </div>
     );

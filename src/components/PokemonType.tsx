@@ -6,7 +6,7 @@ type PokemonTypeProps = {
 }
 
 const PokemonType: FunctionComponent<PokemonTypeProps> = ({ type }) => (
-    <img src={getType(type)} className='h-7'/>
+    <img src={getType(type)} className='h-7 w-15'/>
 );
 
 export default PokemonType;

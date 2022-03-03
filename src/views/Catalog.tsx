@@ -5,6 +5,7 @@ import { pokemonFetcher } from '../utils/fetchers';
 import { Pokemon } from '../utils/types';
 import PokemonCard from '../components/PokemonCard';
 import BlackButton from '../components/BlackButton';
+import Logo from '../components/Logo';
 
 const Catalog: FunctionComponent<{}> = () => {
     const [pokemons, setPokemons] = useState<Pokemon[]>([]);
@@ -22,7 +23,8 @@ const Catalog: FunctionComponent<{}> = () => {
     if (pokemons.length == 0) return <div>loading...</div>
 
     return (
-        <div>
+        <div className="container mx-auto h-screen space-y-10">
+            <Logo />
             <div className='grid md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1 content-end'>
                 {
                     pokemons.map(pokemon => <PokemonCard key={pokemon.name} pokemon={pokemon}/>)
