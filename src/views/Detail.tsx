@@ -33,14 +33,14 @@ const Detail: FunctionComponent<{}> = () => {
                     src={pokemonDetail.pokemon.sprites.other.dream_world.front_default}
                     className='mx-auto py-8 w-80'
                 />
-                <div className='sm:mx-auto'>
+                <div className='sm:mx-auto px-4'>
                     <div className="text-5xl text-left font-medium py-8 w-[100%] justify-self-auto ">
                         {pokemonDetail.pokemon.name.toUpperCase()}
                         <p className="
                             text-2xl
                             text-left 
                             font-thin 
-                            py-8 
+                            py-8
                             w-[100%]
                             tracking-wide"
                         >
@@ -59,7 +59,8 @@ const Detail: FunctionComponent<{}> = () => {
                 underline
                 underline-offset-8
                 w-[100%]
-                mt-10 
+                mt-10
+                px-4
                 tracking-wide">
                 Description
             </p>
@@ -68,6 +69,7 @@ const Detail: FunctionComponent<{}> = () => {
                 text-left 
                 font-thin
                 py-8
+                px-4
                 w-[100%]
                 tracking-wide"
             >
