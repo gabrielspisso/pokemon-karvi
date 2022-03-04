@@ -6,7 +6,6 @@ import {
 import { Route } from 'react-router';
 import Catalog from './views/Catalog';
 import Detail from './views/Detail';
-import './App.css';
 
 function App() {
   return (
