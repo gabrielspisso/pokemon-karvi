@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/pokemon-karvi/static/css/main.aad0593a.css",
-    "main.js": "/pokemon-karvi/static/js/main.6d984b83.js",
+    "main.css": "/pokemon-karvi/static/css/main.fca06d9f.css",
+    "main.js": "/pokemon-karvi/static/js/main.b22901e1.js",
     "static/media/pokelogo-karvi.png": "/pokemon-karvi/static/media/pokelogo-karvi.9b1747f1efac448b7a9b.png",
     "static/media/dark.png": "/pokemon-karvi/static/media/dark.deb6f9ec21687d8c2b21.png",
     "static/media/water.png": "/pokemon-karvi/static/media/water.4c20478ad32777fa5e89.png",
@@ -21,11 +21,11 @@
     "static/media/bug.png": "/pokemon-karvi/static/media/bug.468686def099fb20d2bc.png",
     "static/media/steel.png": "/pokemon-karvi/static/media/steel.695a8eda567f211c3edc.png",
     "index.html": "/pokemon-karvi/index.html",
-    "main.aad0593a.css.map": "/pokemon-karvi/static/css/main.aad0593a.css.map",
-    "main.6d984b83.js.map": "/pokemon-karvi/static/js/main.6d984b83.js.map"
+    "main.fca06d9f.css.map": "/pokemon-karvi/static/css/main.fca06d9f.css.map",
+    "main.b22901e1.js.map": "/pokemon-karvi/static/js/main.b22901e1.js.map"
   },
   "entrypoints": [
-    "static/css/main.aad0593a.css",
-    "static/js/main.6d984b83.js"
+    "static/css/main.fca06d9f.css",
+    "static/js/main.b22901e1.js"
   ]
 }
