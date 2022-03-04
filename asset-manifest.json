@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.aad0593a.css",
+    "main.js": "/static/js/main.cd105f90.js",
+    "static/media/pokelogo-karvi.png": "/static/media/pokelogo-karvi.9b1747f1efac448b7a9b.png",
+    "static/media/dark.png": "/static/media/dark.deb6f9ec21687d8c2b21.png",
+    "static/media/water.png": "/static/media/water.4c20478ad32777fa5e89.png",
+    "static/media/flying.png": "/static/media/flying.9156f6aa8d000a4756a5.png",
+    "static/media/ground.png": "/static/media/ground.cf3de304489fb880e80c.png",
+    "static/media/normal.png": "/static/media/normal.8c3277953bbe964ce6d8.png",
+    "static/media/rock.png": "/static/media/rock.6278a10ad1541602fbdd.png",
+    "static/media/dragon.png": "/static/media/dragon.cb3444488835bf3f576e.png",
+    "static/media/poison.png": "/static/media/poison.ea3f94aecc6d10573a60.png",
+    "static/media/fighting.png": "/static/media/fighting.28cce2e802868f7244b9.png",
+    "static/media/psychic.png": "/static/media/psychic.773898c8aaa15bca8bfa.png",
+    "static/media/grass.png": "/static/media/grass.b06edc43e62e1823d3c3.png",
+    "static/media/fairy.png": "/static/media/fairy.d139d12b90fecf56c0c8.png",
+    "static/media/ghost.png": "/static/media/ghost.3fdf8c047c0953d4a9bc.png",
+    "static/media/electric.png": "/static/media/electric.73f2506f5aa7f5cd8561.png",
+    "static/media/fire.png": "/static/media/fire.06269deb0c5fdbff62d9.png",
+    "static/media/bug.png": "/static/media/bug.468686def099fb20d2bc.png",
+    "static/media/steel.png": "/static/media/steel.695a8eda567f211c3edc.png",
+    "index.html": "/index.html",
+    "main.aad0593a.css.map": "/static/css/main.aad0593a.css.map",
+    "main.cd105f90.js.map": "/static/js/main.cd105f90.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.aad0593a.css",
+    "static/js/main.cd105f90.js"
+  ]
+}
