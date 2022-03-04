@@ -1,6 +1,10 @@
 # Pokemon Karvi
 
-This project was created with [Create React App](https://github.com/facebook/create-react-app) for Karvi's challenge
+This project was created with [Create React App](https://github.com/facebook/create-react-app) for Karvi's challenge.
+
+For local installation, go to the project directory and run:
+
+### `npm install`
 
 ## Available Scripts
 
