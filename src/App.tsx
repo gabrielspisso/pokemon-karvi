@@ -10,7 +10,7 @@ import './App.css';
 
 function App() {
   return (
-      <BrowserRouter>
+      <BrowserRouter basename='/pokemon-karvi'>
         <Routes>
           <Route path="/detail/:id" element={<Detail />} />
           <Route path="/catalog" element={<Catalog />} />
